@@ -1,77 +1,77 @@
-## Цахим худалдааны системийн танилцуулга
+## Introduction to e-commerce system
 
-Энэхүү онлайн худалдааны платпормыг Laravel 5.4. хувилбар дээр хөгжүүлж байна.
+This online shopping platform is powered by Laravel 5.4. in development on the version.
 
-## Сэрвэрийн үзүүлэлт
+## Server specification
 
-	PHP >= 5.6.4
-	MySQL >= 5.7
-	OpenSSL PHP Extension
-	PDO PHP Extension
-	Mbstring PHP Extension
-	Tokenizer PHP Extension
-	XML PHP Extension
+PHP >= 5.6.4
+MySQL >= 5.7
+OpenSSL PHP Extension
+PDO PHP Extension
+Mbstring PHP Extension
+Tokenizer PHP Extension
+XML PHP Extension
 
 
 <a name="installation"></a>
-## Суулгах
+## Install
 
-Дараах коммандыг ажиллуулж энэхүү төслийг clone хийж авна:
+Clone this project by running the following command:
 
 ```
 git clone https://github.com/tortuvshin/ecommerce.git
 ```
 
-Composer татаж суулгана
+Download and install Composer
 
 ```
-[Composer татах](https://getcomposer.org/download/)
+[Get Composer](https://getcomposer.org/download/)
 ```
 
-Дараа нь, энэхүү төслийг татаж авсан хавтаст орж composer update/install комманд ажиллуулна
+Next, go to the downloaded folder and run the composer update/install command
 
 ```
 composer install
 ```
 
-Nodejs татаж суулгана 
+Download and install Nodejs
 
 ```
 https://nodejs.org/en/download/
 ```
 
-NPM сангууд татах
+Download NPM libraries
 ```
 npm install
 ```
 
-## Тохируулах
+## Adjust
 
-Дараа нь .env-example файлыг өөрчилж .env болгон өөрийн өгөгдлийн сан болон серверийг тохируулна
+Next, modify the .env-example file to .env to configure your database and server
 
-Өгөгдлийн санг үүсгэж тохируулсаны дараа дараах коммандаар хүснэгтүүдийг үүсгэнэ:
+After creating and configuring the database, create the tables with the following command:
 
 ```
 php artisan migrate
 ```
 
-Туршилтын өгөгдөл дараах коммандаар оруулна:
+Enter the test data with the following command:
 
 ```
 php artisan db:seed
 ```
-	
-```
-php artisan key:generate
-```
-	
-Frontend хөгжүүлэлтэнд хамааралтай сангуудыг дараах командаар оруулна:
 
 ```
-bower install
+php artisan key: generate
 ```
 
-reChaptcha код авах: 
+Add the required libraries for frontend development with the following command:
+
+```
+bower installation
+```
+
+Get reChaptcha code:
 
 ```
 https://www.google.com/recaptcha/admin#list
@@ -81,7 +81,7 @@ https://www.google.com/recaptcha/admin#list
 RECAPTCHA_PUBLIC_KEY, and RECAPTCHA_PRIVATE_KEY
 ```
 
-reCaptcha кодуудаа .env файлд оруулна. Жишээ нь: 
+Paste your reCaptcha codes into the .env file. For example:
 
 ```
 RECAPTCHA_PUBLIC_KEY = ModuRecaptchaPublicKeyObtained
@@ -89,31 +89,31 @@ RECAPTCHA_PUBLIC_KEY = ModuRecaptchaPublicKeyObtained
 RECAPTCHA_PRIVATE_KEY = ModuRecaptchaPrivateKeyObtained
 ```
 
-***Тайлбар:*** ```APP_DEBUG == true``` буюу debug асаалттай байгаа үед reCaptcha хэрэглэхгүй
+***Note:*** reCaptcha will not be used when ```APP_DEBUG == true``` or debug is on
 
 
 
-NPM сангууд суулгах:
+Install NPM libraries:
 
 ```
-npm install 
+npm install
 ```
 
-Хэрвээ Window үйлдлийн систем  болон VM ашиглаж хөгжүүлэлт хийж байгаа бол дараах коммандыг ажиллуулна: 
+If you are developing using the Windows operating system and VM, run the following command:
 ```
 npm install --no-bin-links
 ```
 
-Laravel Mix ашиглах
+Using Laravel Mix
 
 ```
 npm run dev
 ```
 
-Туршилтын хэрэглэгчийн мэдээлэл
+Test user information
 
-	Хэрэглэгчийн нэр: admin@admin.com
-	Нууц үг: admin
+Username: admin@admin.com
+Password: admin
 
 
 [NODEJS]: https://nodejs.org/en/download/
